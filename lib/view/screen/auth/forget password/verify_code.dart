@@ -36,8 +36,8 @@ class VerifyCode extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const CustomBodyauth(
-                body: 'Please Enter The Digit Code Sent To ayman@gmail.com',
+               CustomBodyauth(
+                body: 'Please Enter The Digit Code Sent To ${controllerImpl.email}',
               ),
               const SizedBox(
                 height: 20,
@@ -51,7 +51,7 @@ class VerifyCode extends StatelessWidget {
                 onCodeChanged: (String code) {},
                 //runs when every textfield is filled
                 onSubmit: (String verificationCode) {
-                  controllerImpl.goToResetPassword();
+                  controllerImpl.goToResetPassword(verificationCode);
                  
                 }, // end onSubmit
               ),

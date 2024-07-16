@@ -31,10 +31,12 @@ class ForgetPasswordControllerImpl extends ForgetPasswordController {
         //data.addAll(response);
         Get.offNamed(
           AppRoutes.verifyCode,
+          arguments: {'email': email.text}
         );
         
       } else {
         Get.defaultDialog(title: 'warning', middleText: 'email not valid ');
+        
         statusRequest = StatusRequest.failure;
       }
     } else {

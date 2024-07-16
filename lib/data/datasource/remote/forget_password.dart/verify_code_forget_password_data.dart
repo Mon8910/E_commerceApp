@@ -1,9 +1,9 @@
 import 'package:ecommerce_app/app_link.dart';
 import 'package:ecommerce_app/core/class/crud.dart';
 
-class LoginData {
+class VerifyCodeForgetPasswordData {
   Crud crud;
-  LoginData(this.crud);
+  VerifyCodeForgetPasswordData(this.crud);
   postDtat(
     String email,
     String verifycode,
