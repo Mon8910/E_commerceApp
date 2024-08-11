@@ -17,7 +17,7 @@ class OnboardingControllerImpl extends OnboardingController {
   next() {
     currenttPage++;
     if (currenttPage > onboardingList.length - 1) {
-      services.sharedPreferences.setString('onboarding', "1");
+      services.sharedPreferences.setString('step', "1");
 
       Get.offAllNamed(AppRoutes.login);
     } else {
