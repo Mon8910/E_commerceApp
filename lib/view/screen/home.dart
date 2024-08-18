@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/controller/home_controller.dart';
+import 'package:ecommerce_app/core/constant/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,10 +8,10 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    HomeControllerImpl controllerImpl = Get.put(HomeControllerImpl());
+   Get.put(HomeControllerImpl());
 
     return Scaffold(
-        body: Container(
+      body:  GetBuilder<HomeControllerImpl>(builder: (controllerImpl)=>Container(
       child: ListView(
         children: [
           Container(
@@ -53,6 +54,7 @@ class Home extends StatelessWidget {
           )
         ],
       ),
-    ));
+    )),
+    );
   }
 }

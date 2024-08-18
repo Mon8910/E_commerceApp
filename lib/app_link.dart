@@ -1,5 +1,6 @@
 class AppLink {
   static const String baseUrl = 'http://10.0.2.2/ecommerce';
+  /////////auth
   static const String signupLink = '$baseUrl/auth/signup.php';
   static const String loginLink = '$baseUrl/auth/login.php';
   static const String veriftySignupLink = '$baseUrl/auth/veriftycode.php';
@@ -11,4 +12,8 @@ class AppLink {
 
   static const String resestpassword =
       '$baseUrl/forgetpassword/resetpassword.php';
+
+      /////////home
+      static const String home =
+      '$baseUrl/home.php';
 }
