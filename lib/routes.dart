@@ -8,7 +8,11 @@ import 'package:ecommerce_app/view/screen/auth/signup.dart';
 import 'package:ecommerce_app/view/screen/auth/forget%20password/success_reset_password.dart';
 import 'package:ecommerce_app/view/screen/auth/success_signup.dart';
 import 'package:ecommerce_app/view/screen/auth/verifty_code_sign_up.dart';
-import 'package:ecommerce_app/view/screen/home.dart';
+import 'package:ecommerce_app/view/screen/cart.dart';
+import 'package:ecommerce_app/view/screen/favorite.dart';
+import 'package:ecommerce_app/view/screen/home_screen.dart';
+import 'package:ecommerce_app/view/screen/items_details.dart';
+import 'package:ecommerce_app/view/screen/items_screen.dart';
 import 'package:ecommerce_app/view/screen/language.dart';
 import 'package:ecommerce_app/view/screen/onboarding.dart';
 import 'package:get/get.dart';
@@ -58,6 +62,22 @@ List<GetPage<dynamic>>? routes = [
   ),
   GetPage(
     name: AppRoutes.home,
-    page: () => const Home(),
+    page: () => const HomeScreen(),
+  ),
+  GetPage(
+    name: AppRoutes.items,
+    page: () => const ItemsScreen(),
+  ),
+  GetPage(
+    name: AppRoutes.itemsDetaisl,
+    page: () => const ItemsDetails(),
+  ),
+  GetPage(
+    name: AppRoutes.myfavorite,
+    page: () => const Favorite(),
+  ),
+  GetPage(
+    name: AppRoutes.cart,
+    page: () => const Cart(),
   ),
 ];

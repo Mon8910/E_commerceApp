@@ -8,7 +8,11 @@ class AppRoutes {
 
   static const String successSignup = '/successSignup';
   static const String successResetPassword = '/successResetPassword';
-    static const String veriftyCodeSignUp = '/veriftyCodeSignUp';
-    static const String home = '/home';
-
+  static const String veriftyCodeSignUp = '/veriftyCodeSignUp';
+  static const String home = '/home';
+  static const String items = '/items';
+  static const String itemsDetaisl = '/itemsDetails';
+   static const String myfavorite = '/myfavorite';
+   static const String cart = '/cart';
+   
 }

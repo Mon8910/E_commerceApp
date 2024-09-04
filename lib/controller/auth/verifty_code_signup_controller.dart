@@ -1,7 +1,8 @@
 import 'package:ecommerce_app/core/class/statusrequest.dart';
 import 'package:ecommerce_app/core/constant/app_routes.dart';
 import 'package:ecommerce_app/core/function/handling_data.dart';
-import 'package:ecommerce_app/data/datasource/remote/verifty_code_data.dart';
+import 'package:ecommerce_app/core/services/services.dart';
+import 'package:ecommerce_app/data/datasource/remote/veriftycode_data.dart';
 import 'package:get/get.dart';
 
 abstract class VeriftyCodeSignupController extends GetxController {
@@ -13,6 +14,7 @@ class VeriftyCodeSignupControllerImpl extends VeriftyCodeSignupController {
   String? email;
   VeriftyCodeData veriftyCodeData = VeriftyCodeData(Get.find());
   late StatusRequest statusRequest;
+  MyServices myServices = Get.find();
 
   @override
   checkCode() {}

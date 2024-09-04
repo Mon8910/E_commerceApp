@@ -11,7 +11,8 @@ class VeriftyCodeSignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    VeriftyCodeSignupControllerImpl controllerImpl=Get.put(VeriftyCodeSignupControllerImpl());
+    VeriftyCodeSignupControllerImpl controllerImpl =
+        Get.put(VeriftyCodeSignupControllerImpl());
     return Scaffold(
         appBar: AppBar(
           elevation: 0.0,
@@ -35,8 +36,9 @@ class VeriftyCodeSignUp extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const CustomBodyauth(
-                body: 'Please Enter The Digit Code Sent To ayman@gmail.com',
+             const CustomBodyauth(
+                body:
+                    'Please Enter The Digit Code Sent To mail',
               ),
               const SizedBox(
                 height: 20,
@@ -51,13 +53,11 @@ class VeriftyCodeSignUp extends StatelessWidget {
                 //runs when every textfield is filled
                 onSubmit: (String verificationCode) {
                   controllerImpl.goToSuccessSignup(verificationCode);
-                 
                 }, // end onSubmit
               ),
-            const  SizedBox(
+              const SizedBox(
                 height: 40,
               ),
-              
               const SizedBox(
                 height: 40,
               ),

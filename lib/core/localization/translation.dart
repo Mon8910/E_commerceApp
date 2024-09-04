@@ -25,7 +25,13 @@ class MyTranslation extends Translations {
           '18':'أتبع طلبك',
           '19':'لقد تم استخدام أفضل متتبع \n لتتبع طلبك. ستعرف مكان \n منتجك في الوقت الحالي',
           '20':'توصيل سريع',
-          '21':'تسليم موثوق وسريع. نحن \n نوصل منتجك إلى أسرع \nطريقة ممكنة'
+          '21':'تسليم موثوق وسريع. نحن \n نوصل منتجك إلى أسرع \nطريقة ممكنة',
+          '22':'البحث عن المنتجات',
+          '28':'مفاجأة الصيف',
+          '24':'استرداد نقدي 20%',
+          '25':'المنتج بالنسبة لك',
+          '26':"العروض",
+          '29':'استمر'
         },
         "en": {
           '1': 'Choose your language',
@@ -49,7 +55,14 @@ class MyTranslation extends Translations {
           '18':'Track Your Order',
           '19':'Best Tracker has been userd for \n track your order.you`ll know where \n your product is at the moment',
           '20':'Fast Delivery',
-          '21':'Reliable And Fast Delivery.we \n Deliver youe product to the fastest \nway possible'
+          '21':'Reliable And Fast Delivery.we \n Deliver youe product to the fastest \nway possible',
+          
+          '28':'A Summer surprise',
+          '24':'Cash back 20%',
+          '25':'Product for you',
+          '26':'offer',
+          '22':'Find Products',
+          '29':'Continue'
         },
       };
 }

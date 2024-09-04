@@ -1,5 +1,11 @@
 import 'package:ecommerce_app/controller/home_controller.dart';
-import 'package:ecommerce_app/core/constant/app_color.dart';
+import 'package:ecommerce_app/core/class/handling_data_view.dart';
+import 'package:ecommerce_app/core/constant/app_routes.dart';
+import 'package:ecommerce_app/view/widget/custom_appbar_home.dart';
+import 'package:ecommerce_app/view/widget/home/custom_card_home.dart';
+import 'package:ecommerce_app/view/widget/home/custom_list_categories_home.dart';
+import 'package:ecommerce_app/view/widget/home/custom_list_items_home.dart';
+import 'package:ecommerce_app/view/widget/home/custom_title_home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,53 +14,49 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   Get.put(HomeControllerImpl());
+    Get.put(HomeControllerImpl());
 
-    return Scaffold(
-      body:  GetBuilder<HomeControllerImpl>(builder: (controllerImpl)=>Container(
-      child: ListView(
-        children: [
-          Container(
+    return
+      GetBuilder<HomeControllerImpl>(
+        builder: (controllerImpl) => HandlingDataView(
+          statusRequest: controllerImpl.statusRequest,
+          widget: Container(
             padding: const EdgeInsets.symmetric(horizontal: 15),
-            margin: const EdgeInsets.only(top: 10),
-            child: Row(
+            child: ListView(
               children: [
-                Expanded(
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                        prefixIcon: const Icon(Icons.search),
-                        hintText: 'Find product',
-                        hintStyle: const TextStyle(fontSize: 15),
-                        border: OutlineInputBorder(
-                            borderSide: BorderSide.none,
-                            borderRadius: BorderRadius.circular(15)),
-                        filled: true,
-                        fillColor: Colors.grey[100]),
-                  ),
+                CustomAppbarHome(
+                  title: '22'.tr,
+                  
+                  search: () {}, onPressedIconfavorite: () {
+                    Get.toNamed(AppRoutes.myfavorite);
+                    },
                 ),
+                 CustomCardHome(
+                    title: '25'.tr,
+                     subTitle: '24'.tr),
                 const SizedBox(
-                  width: 7,
+                  height: 20,
                 ),
-                Container(
-                  width: 60,
-                  padding: const EdgeInsets.symmetric(vertical: 7),
-                  decoration: BoxDecoration(
-                      color: Colors.grey[100],
-                      borderRadius: BorderRadius.circular(15)),
-                  child: IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.notifications_on_outlined,
-                        color: Colors.grey[400],
-                        size: 30,
-                      )),
-                )
+                const CustomListCategoriesHome(),
+                const SizedBox(
+                  height: 10,
+                ),
+                 CustomTitleHome(title: '25'.tr),
+                const SizedBox(
+                  height: 10,
+                ),
+                const CustomListItemsHome(),
+                  CustomTitleHome(title: '26'.tr),
+                const SizedBox(
+                  height: 10,
+                ),
+                const CustomListItemsHome(),
+                
               ],
             ),
-          )
-        ],
-      ),
-    )),
-    );
+          ),
+        ),
+      );
+    
   }
-}
+}//SvgPicture.network( '${AppLink.catImage}/${controllerImpl.categories[index]['categories_image']},');

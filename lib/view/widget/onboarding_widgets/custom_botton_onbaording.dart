@@ -23,7 +23,7 @@ class CustomBottonOnbaording extends GetView<OnboardingControllerImpl> {
         onPressed: () {
           controller.next();
         },
-        child: const Text('Continue'),
+        child:  Text('29'.tr),
       ),
     );
   }
