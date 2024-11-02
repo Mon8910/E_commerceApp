@@ -8,6 +8,7 @@ import 'package:get/get.dart';
 abstract class ForgetPasswordController extends GetxController {
   goToverifty();
   checkEmail();
+  
 }
 
 class ForgetPasswordControllerImpl extends ForgetPasswordController {

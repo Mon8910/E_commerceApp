@@ -2,10 +2,11 @@ import 'package:ecommerce_app/core/class/statusrequest.dart';
 import 'package:ecommerce_app/core/constant/app_routes.dart';
 import 'package:ecommerce_app/core/function/handling_data.dart';
 import 'package:ecommerce_app/core/services/services.dart';
-import 'package:ecommerce_app/data/datasource/remote/signup_data.dart';
+import 'package:ecommerce_app/data/datasource/remote/signp_datas.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+
 
 abstract class SignupController extends GetxController {
   signup();

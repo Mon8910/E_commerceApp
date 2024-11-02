@@ -1,9 +1,7 @@
 import 'package:ecommerce_app/controller/favorite_controller.dart';
 import 'package:ecommerce_app/controller/items_controller.dart';
 import 'package:ecommerce_app/core/class/handling_data_view.dart';
-import 'package:ecommerce_app/core/constant/app_routes.dart';
 import 'package:ecommerce_app/data/model/items_model.dart';
-import 'package:ecommerce_app/view/widget/custom_appbar_home.dart';
 import 'package:ecommerce_app/view/widget/items/custom_list_items.dart';
 import 'package:ecommerce_app/view/widget/items/list_categories_items.dart';
 import 'package:flutter/material.dart';
@@ -22,13 +20,13 @@ class ItemsScreen extends StatelessWidget {
         child: GetBuilder<ItemsControllerImpl>(
           builder: (controller) => ListView(
             children: [
-              CustomAppbarHome(
-                title: 'Find Products',
-                search: () {},
-                onPressedIconfavorite: () {
-                  Get.toNamed(AppRoutes.myfavorite);
-                },
-              ),
+              // CustomAppbarHome(
+              //   title: 'Find Products',
+              //   search: () {},
+              //   onPressedIconfavorite: () {
+              //     Get.toNamed(AppRoutes.myfavorite);
+              //   },
+              // ),
               const SizedBox(
                 height: 20,
               ),

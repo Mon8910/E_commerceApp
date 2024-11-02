@@ -2,7 +2,6 @@ import 'package:ecommerce_app/controller/items_details_controller.dart';
 import 'package:ecommerce_app/core/class/handling_data_view.dart';
 import 'package:ecommerce_app/core/constant/app_color.dart';
 import 'package:ecommerce_app/core/function/translate_database.dart';
-import 'package:ecommerce_app/core/services/services.dart';
 import 'package:ecommerce_app/view/widget/items_details/custom_image_items_details.dart';
 import 'package:ecommerce_app/view/widget/items_details/custom_price.dart';
 import 'package:flutter/material.dart';

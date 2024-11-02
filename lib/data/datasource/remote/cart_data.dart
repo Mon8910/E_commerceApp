@@ -1,6 +1,5 @@
 import 'package:ecommerce_app/app_link.dart';
 import 'package:ecommerce_app/core/class/crud.dart';
-import 'package:flutter/material.dart';
 
 class CartData {
   Crud crud;
@@ -32,6 +31,13 @@ class CartData {
     var response = await crud.postRequest(
       AppLink.viewCart,
       {"userid": userid.toString()},
+    );
+    return response.fold((l) => l, (r) => r);
+  }
+  addCoupon(String couponName) async {
+    var response = await crud.postRequest(
+      AppLink.coupon,
+      {"couponname": couponName},
     );
     return response.fold((l) => l, (r) => r);
   }

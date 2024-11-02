@@ -28,5 +28,6 @@ class HandlingDataView extends StatelessWidget {
                         child: Lottie.asset(AppAssets.noDataLottie),
                       )
                     : widget;
+                    
   }
 }

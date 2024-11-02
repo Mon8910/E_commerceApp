@@ -14,4 +14,13 @@ class VeriftyCodeData {
     });
     return response.fold((l) => l, (r) => r);
   }
+
+  rsendCode(
+    String email,
+  ) async {
+    var response = await crud.postRequest(AppLink.resendCode, {
+      "email": email,
+    });
+    return response.fold((l) => l, (r) => r);
+  }
 }

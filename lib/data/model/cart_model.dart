@@ -1,5 +1,5 @@
 class CartModel {
-  int? itemsprice;
+  num? itemsprice;
   int? countiems;
   int? cartId;
   int? cartUserid;
@@ -12,8 +12,8 @@ class CartModel {
   String? itemsImage;
   int? itemsCount;
   int? itemsActive;
-  int? itemsPrice;
-  int? itemsDiscount;
+  num? itemsPrice;
+  num? itemsDiscount;
   String? itemsDate;
   int? itemsCat;
 

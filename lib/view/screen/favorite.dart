@@ -1,7 +1,5 @@
 import 'package:ecommerce_app/controller/myfavorite_controller.dart';
 import 'package:ecommerce_app/core/class/handling_data_view.dart';
-import 'package:ecommerce_app/core/constant/app_routes.dart';
-import 'package:ecommerce_app/view/widget/custom_appbar_home.dart';
 import 'package:ecommerce_app/view/widget/favorite/list_item_favorite.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,14 +16,14 @@ class Favorite extends StatelessWidget {
           child: GetBuilder<MyFavoriteController>(
             builder: (controller) => ListView(
               children: [
-                CustomAppbarHome(
-                  title: '22'.tr,
+                // CustomAppbarHome(
+                //   title: '22'.tr,
                 
-                  search: () {},
-                  onPressedIconfavorite: () {
-                    Get.toNamed(AppRoutes.myfavorite);
-                  },
-                ),
+                //   search: () {},
+                //   onPressedIconfavorite: () {
+                //     Get.toNamed(AppRoutes.myfavorite);
+                //   },
+                // ),
                 const SizedBox(
                   height: 20,
                 ),

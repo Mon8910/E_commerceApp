@@ -36,9 +36,9 @@ class VeriftyCodeSignUp extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-             const CustomBodyauth(
+              CustomBodyauth(
                 body:
-                    'Please Enter The Digit Code Sent To mail',
+                    'Please Enter The Digit Code Sent To ${controllerImpl.email}',
               ),
               const SizedBox(
                 height: 20,
@@ -61,6 +61,17 @@ class VeriftyCodeSignUp extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
+              Center(
+                child: InkWell(
+                  onTap: () {
+                    controllerImpl.resendCode();
+                  },
+                  child: const Text(
+                    'Resend Code',
+                    style: TextStyle(color: AppColor.primaryColor),
+                  ),
+                ),
+              )
             ],
           ),
         ));

@@ -13,6 +13,7 @@ abstract class LoginController extends GetxController {
   goToSignup();
   goToForgetPassword();
   permision();
+  
 }
 
 class LoginControllerImpl extends LoginController {
@@ -42,6 +43,7 @@ class LoginControllerImpl extends LoginController {
       print('======================= $response');
       statusRequest = handlingData(response);
       if (response['status'] == 'success') {
+        if(response['data']['users_approve']==1){
         myServices.sharedPreferences
             .setInt('id', response['data']['users_id']);
         myServices.sharedPreferences
@@ -52,11 +54,16 @@ class LoginControllerImpl extends LoginController {
             .setString('phone', response['data']['users_phone']);
             myServices.sharedPreferences
             .setString('step','2');
-
+        
+       
         //data.addAll(response);
         Get.offNamed(
           AppRoutes.home,
         );
+        } else{
+           Get.toNamed(AppRoutes.veriftyCodeSignUp,
+            arguments: {'email': email.text});
+        }
       } else {
         Get.defaultDialog(
             title: 'warning', middleText: 'email or password are incorrect ');

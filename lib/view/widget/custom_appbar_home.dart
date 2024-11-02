@@ -4,12 +4,14 @@ class CustomAppbarHome extends StatelessWidget {
   const CustomAppbarHome(
       {super.key,
       required this.title,
-      
-      required this.search, required this.onPressedIconfavorite});
+      required this.search,
+      required this.onPressedIconfavorite, required this.textEditingController, required this.onChanged});
   final String title;
-  
+
   final void Function() search;
   final void Function() onPressedIconfavorite;
+  final TextEditingController textEditingController;
+ final void Function(String) onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,8 @@ class CustomAppbarHome extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: TextFormField(
+            child: TextFormField(onChanged:onChanged ,
+              controller:textEditingController ,
               decoration: InputDecoration(
                   prefixIcon: IconButton(
                       onPressed: search, icon: const Icon(Icons.search)),
@@ -37,7 +40,6 @@ class CustomAppbarHome extends StatelessWidget {
           const SizedBox(
             width: 7,
           ),
-         
           const SizedBox(
             width: 7,
           ),
