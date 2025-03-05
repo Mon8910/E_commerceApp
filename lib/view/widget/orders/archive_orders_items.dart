@@ -2,6 +2,7 @@ import 'package:ecommerce_app/controller/orders/archive_orders_controller.dart';
 import 'package:ecommerce_app/core/constant/app_color.dart';
 import 'package:ecommerce_app/core/constant/app_routes.dart';
 import 'package:ecommerce_app/data/model/orders_model.dart';
+import 'package:ecommerce_app/view/screen/orders/dialog_rating.dart';
 import 'package:get/get.dart';
 
 import 'package:flutter/material.dart';
@@ -46,6 +47,16 @@ class ArchiveOrdersItems extends GetView<ArchiveOrdersController> {
                     },
                     child: const Text(
                       'Details',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: AppColor.secoundColor),
+                    )),
+                    TextButton(
+                    onPressed: () {
+                      show(context);
+                    },
+                    child: const Text(
+                      'rating',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: AppColor.secoundColor),

@@ -67,6 +67,7 @@ class OrderDetailsController extends GetxController {
 
   @override
   void onInit() {
+    
     ordersModel = Get.arguments['orderdetails'];
     intialData();
     getData();

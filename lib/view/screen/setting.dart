@@ -11,8 +11,7 @@ class Setting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SettingController controller =Get.put(SettingController());
-    return Scaffold(
-      body: ListView(
+    return  ListView(
         children: [
           Stack(
             clipBehavior: Clip.none,
@@ -107,7 +106,7 @@ class Setting extends StatelessWidget {
             ),
           )
         ],
-      ),
+      
     );
   }
 }

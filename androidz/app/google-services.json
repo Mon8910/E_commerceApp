@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "505662048196",
+    "project_id": "ecommercephp-bb93f",
+    "storage_bucket": "ecommercephp-bb93f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505662048196:android:a94c7b83f7bba831ec8691",
+        "android_client_info": {
+          "package_name": "com.example.demo_app_ayman"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8__JodvS4tOzQSrkVhUgk9V3ym8tlSkY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

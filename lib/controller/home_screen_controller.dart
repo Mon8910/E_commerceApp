@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/view/screen/home.dart';
+import 'package:ecommerce_app/view/screen/offer_view.dart';
 import 'package:ecommerce_app/view/screen/setting.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,14 +20,7 @@ class HomeScreenControllerImpl extends HomeScreenController {
   List<Widget> listpage = [
     const Home(),
     const Setting(),
-   const Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Center(
-          child: Text('order'),
-        )
-      ],
-    ),
+   const OfferView(),
     const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [

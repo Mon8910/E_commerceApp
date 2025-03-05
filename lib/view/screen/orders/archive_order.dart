@@ -13,17 +13,19 @@ class ArchiveOrder extends StatelessWidget {
     Get.put(ArchiveOrdersController());
     return Scaffold(
       appBar: AppBar(
-        title:const Text('Archive Orders'),
+        title: const Text('Archive Orders'),
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
         child: GetBuilder<ArchiveOrdersController>(
-          builder: (controller) => HandlingDataView(statusRequest: controller.statusRequest, widget: ListView.builder(
-            itemCount: controller.data.length,
-            itemBuilder: (context, index) =>
-                ArchiveOrdersItems(ordersModel: controller.data[index]),
-          ),)
-        ),
+            builder: (controller) => HandlingDataView(
+                  statusRequest: controller.statusRequest,
+                  widget: ListView.builder(
+                    itemCount: controller.data.length,
+                    itemBuilder: (context, index) =>
+                        ArchiveOrdersItems(ordersModel: controller.data[index]),
+                  ),
+                )),
       ),
     );
   }

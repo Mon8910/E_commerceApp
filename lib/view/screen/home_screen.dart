@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:ecommerce_app/controller/home_screen_controller.dart';
 import 'package:ecommerce_app/core/constant/app_color.dart';
 import 'package:ecommerce_app/core/constant/app_routes.dart';
@@ -14,20 +16,35 @@ class HomeScreen extends StatelessWidget {
 
     return GetBuilder<HomeScreenControllerImpl>(
         builder: (controller) => Scaffold(
-              floatingActionButton: FloatingActionButton(
-                onPressed: () {
-                  Get.toNamed(AppRoutes.cart);
-                },
-                backgroundColor: AppColor.primaryColor,
-                shape: const CircleBorder(),
-                child: const Icon(
-                  Icons.shopping_basket_outlined,
-                ),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () {
+                Get.toNamed(AppRoutes.cart);
+              },
+              backgroundColor: AppColor.primaryColor,
+              shape: const CircleBorder(),
+              child: const Icon(
+                Icons.shopping_basket_outlined,
               ),
-              floatingActionButtonLocation:
-                  FloatingActionButtonLocation.centerDocked,
-              bottomNavigationBar: const CustomBottomAppbarHomescreen(),
-              body: controller.listpage.elementAt(controller.currentPage),
-            ));
+            ),
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.centerDocked,
+            bottomNavigationBar: const CustomBottomAppbarHomescreen(),
+            body: WillPopScope(
+                child: controller.listpage.elementAt(controller.currentPage),
+                onWillPop: () {
+                  Get.defaultDialog(
+                    title: 'warning',
+                    middleText: 'Do you want to exit the app',
+                    onCancel: (){},
+                    cancelTextColor: AppColor.primaryColor,
+                    confirmTextColor: Colors.white,
+                    buttonColor: AppColor.primaryColor,
+                    
+                    onConfirm: () {
+                      exit(0);
+                    },
+                  );
+                  return Future.value(false);
+                })));
   }
 }

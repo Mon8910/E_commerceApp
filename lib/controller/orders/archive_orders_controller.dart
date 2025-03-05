@@ -55,6 +55,20 @@ class ArchiveOrdersController extends GetxController {
     }
     update();
   }
+  submitRating(ordersid, raiting,  comment)async{
+    data.clear();
+    statusRequest = StatusRequest.loading;
+    var response = await archiveOrdersData
+        .ratingData(ordersid,raiting,comment);
+    print('==========$response');
+    statusRequest = handlingData(response);
+    if (response['status'] == 'success') {
+      print("success");
+    } else {
+      statusRequest = StatusRequest.failure;
+    }
+    update();
+  }
 
   refreshData() {
     getData();

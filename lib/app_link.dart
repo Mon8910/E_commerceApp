@@ -45,5 +45,7 @@ class AppLink {
   static const String orderDetails = '$baseUrl/orders/detials.php';
   static const String deleteorders = '$baseUrl/orders/delete.php';
   static const String archiveOrders = '$baseUrl/orders/archive.php';
+  static const String offer = '$baseUrl/offer.php';
+  static const String rating="$baseUrl/rating.php";
 
 }

@@ -9,4 +9,14 @@ class ArchiveOrdersData {
         .postRequest(AppLink.archiveOrders, {"id": userid.toString()});
     return response.fold((l) => l, (r) => r);
   }
+
+  ratingData(int userid, num rate, String message) async {
+    var response = await crud.postRequest(AppLink.rating, {
+      "id": userid.toString(),
+      "rating": rate.toString,
+      "message":message
+
+    });
+    return response.fold((l) => l, (r) => r);
+  }
 }
